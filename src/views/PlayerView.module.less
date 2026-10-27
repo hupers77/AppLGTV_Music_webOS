@@ -1,0 +1,38 @@
+.screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	overflow: hidden;
+
+	.content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -600px; // ProgressBar 너비(1200px)의 절반
+		width: 1200px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 48px;
+		transform-origin: center;
+		// 곡명이 2줄이어도 대략 화면 중앙에 오도록 위로 조금 올린다
+		margin-top: -140px;
+	}
+
+	.frameHost {
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		background: #000;
+		z-index: 10;
+
+		// 오디오 곡일 때만 숨긴다. (유튜브 곡에서는 절대 숨기지 않는다)
+		&.hidden {
+			visibility: hidden;
+		}
+	}
+}

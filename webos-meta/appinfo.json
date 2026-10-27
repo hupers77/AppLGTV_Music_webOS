@@ -1,0 +1,11 @@
+{
+	"id": "com.example.tvmusic",
+	"version": "1.0.0",
+	"vendor": "My Company",
+	"type": "web",
+	"main": "index.html",
+	"title": "TV Music Player",
+	"icon": "icon.png",
+	"largeIcon": "largeIcon.png",
+	"resolution": "1920x1080"
+}

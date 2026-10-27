@@ -1,0 +1,28 @@
+.trackTitle {
+	text-align: center;
+	max-width: 1400px;
+
+	.title {
+		color: #fff;
+		font-size: 60px;
+		line-height: 1.3;
+		font-weight: 600;
+		// 긴 제목은 최대 2줄까지만 표시
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		word-break: break-word;
+
+		// 일시정지 상태는 흐리게 표시
+		&.paused {
+			opacity: 0.45;
+		}
+	}
+
+	.error {
+		margin-top: 16px;
+		color: #ff8a80;
+		font-size: 28px;
+	}
+}
