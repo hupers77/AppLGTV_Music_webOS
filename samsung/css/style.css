@@ -1,0 +1,113 @@
+html, body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	overflow: hidden;
+	cursor: none;
+	font-family: sans-serif;
+}
+
+/* 움직이는 요소는 transform 만 바꿔서 레이아웃 재계산 없이 GPU 합성으로 처리한다 */
+#content {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 1200px;
+	margin: -140px 0 0 -600px;
+	-webkit-will-change: transform;
+	will-change: transform;
+}
+
+/* 곡명 영역(2줄 높이)과 오류 메시지 영역(1줄 높이)은 내용과 상관없이 항상 같은 크기를 차지한다.
+   곡명 길이나 오류 표시 여부로 레이아웃이 변하지 않아야 iframe 이 콘텐츠와 겹치지 않고,
+   레이아웃 재계산도 생기지 않는다. */
+#titlebox {
+	height: 156px;
+	margin-bottom: 8px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+#title {
+	max-width: 100%;
+	color: #fff;
+	font-size: 60px;
+	line-height: 1.3;
+	font-weight: 600;
+	text-align: center;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	word-break: break-word;
+}
+
+#title.paused {
+	opacity: 0.45;
+}
+
+#err {
+	height: 40px;
+	line-height: 40px;
+	color: #ff8a80;
+	font-size: 28px;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#track {
+	height: 10px;
+	border-radius: 5px;
+	background: #333;
+	overflow: hidden;
+}
+
+#fill {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	-webkit-transform-origin: 0 50%;
+	transform-origin: 0 50%;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-will-change: transform;
+	will-change: transform;
+}
+
+#times {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	margin-top: 12px;
+	color: #aaa;
+	font-size: 26px;
+}
+
+/* YouTube iframe 자리. 유튜브 곡에서는 절대 숨기지 않는다 (정책) */
+#frame {
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	background: #000;
+	z-index: 10;
+	-webkit-will-change: transform;
+	will-change: transform;
+}
+
+#frame.hidden {
+	visibility: hidden;
+}

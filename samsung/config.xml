@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://example.com/TvMusic" version="1.0.0" viewmodes="maximized">
+	<tizen:application id="TvMusic001.TvMusic" package="TvMusic001" required_version="2.3"/>
+	<content src="index.html"/>
+	<feature name="http://tizen.org/feature/screen.size.all"/>
+	<icon src="icon.png"/>
+	<name>TV Music Player</name>
+	<tizen:profile name="tv-samsung"/>
+	<tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>
+	<tizen:privilege name="http://tizen.org/privilege/internet"/>
+	<tizen:setting screen-orientation="landscape" context-menu="disable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
+	<access origin="*" subdomains="true"/>
+</widget>

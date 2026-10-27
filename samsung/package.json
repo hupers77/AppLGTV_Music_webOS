@@ -1,0 +1,13 @@
+{
+	"name": "tv-music-player-samsung",
+	"version": "1.0.0",
+	"description": "Samsung Tizen TV music player - black screen, track title and progress bar only",
+	"private": true,
+	"license": "UNLICENSED",
+	"scripts": {
+		"build": "node build.js"
+	},
+	"devDependencies": {
+		"esbuild": "^0.25.0"
+	}
+}

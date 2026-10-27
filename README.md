@@ -3,6 +3,11 @@
 검은 화면에 **곡명 + 프로그레스 바**만 표시하는 LG webOS TV용 음악 플레이어.
 음원은 YouTube 영상(IFrame Player API) 또는 `<audio>` 파일을 쓸 수 있다.
 
+| 플랫폼 | 위치 | 구성 |
+|---|---|---|
+| LG webOS | 이 폴더 (`src/`, `webos-meta/`) | Enact (React) |
+| Samsung Tizen | [`samsung/`](samsung/README.md) | 순수 JS (ES5), 프레임워크 없음 |
+
 ## 시작하기
 
 ```bash
